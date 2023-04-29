@@ -30,6 +30,19 @@
 
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+#instructions {
+  position: absolute;
+  margin: 20px;
+  width: 25%;
+  top: 25%;
+  bottom: 5%;
+  left:0;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  color:black;
+}
 
 @keyframes App-logo-spin {
   from {
