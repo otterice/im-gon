@@ -1,173 +1,452 @@
 [
     {
-        "name": "Javalencia Cafe",
-        "city": "San Francisco",
-        "address": "1594 Market St",
+        "name": "Arcade Coffee Roasters",
+        "city": "Riverside",
+        "address": "3672 Chicago Ave",
         "coordinates": [
-            37.77436888791,
-            -122.42056352338
+            33.97731760847481,
+            -117.34820372799568
         ]
     },
     {
-        "name": "All Star Cafe",
-        "city": "San Francisco",
-        "address": "1500 Market St",
+        "name": "Mundial",
+        "city": "Riverside",
+        "address": "1725 Spruce St",
         "coordinates": [
-            37.77525,
-            -122.41954
+            33.99079,
+            -117.34909
         ]
     },
     {
-        "name": "Blue Bottle Coffee",
-        "city": "San Francisco",
-        "address": "55 S Van Ness Ave",
+        "name": "Mi Cafecito Coffee",
+        "city": "Riverside",
+        "address": "3605 Market St",
         "coordinates": [
-            37.773565810684424,
-            -122.4184657
+            33.984407,
+            -117.374792
         ]
     },
     {
-        "name": "B.Street Waffles",
-        "city": "Palm Springs",
-        "address": "",
+        "name": "Molinos Coffee",
+        "city": "Riverside",
+        "address": "3660 Mission Inn Ave",
         "coordinates": [
-            37.7749295,
-            -122.4194155
+            33.9826349948357,
+            -117.37352474206
         ]
     },
     {
-        "name": "Little Griddle",
-        "city": "San Francisco",
-        "address": "1455 Market St",
+        "name": "Back to the Grind",
+        "city": "Riverside",
+        "address": "3575 University Ave",
         "coordinates": [
-            37.775736486686775,
-            -122.41823404585583
+            33.9812579,
+            -117.3727677
         ]
     },
     {
-        "name": "Earthbar",
-        "city": "San Francisco",
-        "address": "1560 Mission St",
+        "name": "Arcade Downtown",
+        "city": "Riverside",
+        "address": "3870 Main St",
         "coordinates": [
-            37.77353730103808,
-            -122.4184519383539
+            33.9809,
+            -117.37451
         ]
     },
     {
-        "name": "Lunnah",
-        "city": "M\u00e9xico, D.F.",
-        "address": "San Francisco 1431 - A",
+        "name": "Lee's Sandwiches",
+        "city": "Riverside",
+        "address": "1889 University Ave",
         "coordinates": [
-            19.3761005,
-            -99.1748962
+            33.9759789,
+            -117.3525238
         ]
     },
     {
-        "name": "Milkman SF",
-        "city": "San Francisco",
-        "address": "",
+        "name": "R&B Tea - Riverside",
+        "city": "Riverside",
+        "address": "1889 University Ave",
         "coordinates": [
-            37.7749295,
-            -122.4194155
+            33.975921,
+            -117.352412
         ]
     },
     {
-        "name": "Dough",
-        "city": "San Francisco",
-        "address": "1455 Market St",
+        "name": "The Coffee Bean & Tea Leaf",
+        "city": "Riverside",
+        "address": "3712 Mission Inn Ave",
         "coordinates": [
-            37.775703939968864,
-            -122.41816754110529
+            33.982879946029,
+            -117.37410108564
         ]
     },
     {
-        "name": "Se\u00f1or Sisig - Food Trucks",
-        "city": "San Francisco",
-        "address": "",
+        "name": "Dragonmarsh",
+        "city": "Riverside",
+        "address": "3643 University Ave",
         "coordinates": [
-            37.7749295,
-            -122.4194155
+            33.98183,
+            -117.37367
         ]
     },
     {
-        "name": "Cafe Creme",
-        "city": "San Francisco",
-        "address": "50 Oak St",
+        "name": "Coffee Court Bistro",
+        "city": "Riverside",
+        "address": "3607 10th St",
         "coordinates": [
-            37.77544,
-            -122.42033
+            33.9795882565492,
+            -117.374739535153
         ]
     },
     {
-        "name": "Nina's Cafe",
-        "city": "San Francisco",
-        "address": "201 Fell St",
+        "name": "Chela's Bakery",
+        "city": "Riverside",
+        "address": "10295 Arlington Ave",
         "coordinates": [
-            37.776049780427,
-            -122.4212838675
+            33.97501192496089,
+            -117.3658596
         ]
     },
     {
-        "name": "Saint & Olive",
-        "city": "San Francisco",
-        "address": "",
+        "name": "+Hp Potion",
+        "city": "Riverside",
+        "address": "3740 Iowa Ave",
         "coordinates": [
-            37.7749295,
-            -122.4194155
+            33.977064,
+            -117.339493
         ]
     },
     {
-        "name": "Peach Pit",
-        "city": "Winterville",
-        "address": "321 Athens Rd",
+        "name": "The Hideaway Cafe",
+        "city": "Riverside",
+        "address": "3660 Mission Inn Ave",
         "coordinates": [
-            33.97368501693624,
-            -83.28944896356688
+            33.982515,
+            -117.3732373
         ]
     },
     {
-        "name": "Candy Bar Dessert Truck",
-        "city": "San Francisco",
-        "address": "",
+        "name": "Tim Boba",
+        "city": "Riverside",
+        "address": "1450 University Ave",
         "coordinates": [
-            37.7749295,
-            -122.4194155
+            33.97555,
+            -117.34315
         ]
     },
     {
-        "name": "Anthony and Alice's Bistro",
-        "city": "San Francisco",
-        "address": "",
+        "name": "Krak Boba - Riverside",
+        "city": "Riverside",
+        "address": "3907 Chicago Ave",
         "coordinates": [
-            37.7771186828613,
-            -122.419639587402
+            33.974611,
+            -117.349367
         ]
     },
     {
-        "name": "Roger's Chocolates",
-        "city": "San Francisco",
-        "address": null,
+        "name": "Starbucks",
+        "city": "Riverside",
+        "address": "1280 W Blaine St",
         "coordinates": [
-            37.77501,
-            -122.41826
+            33.9827126,
+            -117.3394934
         ]
     },
     {
-        "name": "Ralphs Italian Ices",
-        "city": "Valley Stream",
-        "address": "1091 Rockaway Ave",
+        "name": "Sleepy Kitea",
+        "city": "Riverside",
+        "address": "1725 Spruce St",
         "coordinates": [
-            40.651948556879184,
-            -73.69289743691625
+            33.99079,
+            -117.34909
         ]
     },
     {
-        "name": "Fresh Diet",
-        "city": "San Francisco",
-        "address": null,
+        "name": "Creme de la Creme Cafe",
+        "city": "Riverside",
+        "address": "4080 Lemon St",
         "coordinates": [
-            37.77501,
-            -122.41826
+            33.97792,
+            -117.37368
+        ]
+    },
+    {
+        "name": "Simple Simon's Bakery & Bistro",
+        "city": "Riverside",
+        "address": "3639 Main St",
+        "coordinates": [
+            33.983759,
+            -117.373406
+        ]
+    },
+    {
+        "name": "Tr\u00e0 Boba & Snack",
+        "city": "Riverside",
+        "address": "3740 Iowa Ave",
+        "coordinates": [
+            33.977064,
+            -117.339493
+        ]
+    },
+    {
+        "name": "Uncle Chuang's Bakery",
+        "city": "Riverside",
+        "address": "3740 Iowa Ave",
+        "coordinates": [
+            33.97711,
+            -117.3395
+        ]
+    },
+    {
+        "name": "Tin Lizzy's Cookie Cafe",
+        "city": "Riverside",
+        "address": "1485 Spruce St",
+        "coordinates": [
+            33.9908981323242,
+            -117.343734741211
+        ]
+    },
+    {
+        "name": "Starbucks",
+        "city": "Riverside",
+        "address": "3311 Market St",
+        "coordinates": [
+            33.98731558,
+            -117.37280609
+        ]
+    },
+    {
+        "name": "Cookie Plug",
+        "city": "Riverside",
+        "address": "2790 14th St",
+        "coordinates": [
+            33.97079304781845,
+            -117.36708849354912
+        ]
+    },
+    {
+        "name": "The California Lounge",
+        "city": "Riverside",
+        "address": "3649 Mission Inn Ave",
+        "coordinates": [
+            33.983363,
+            -117.372979
+        ]
+    },
+    {
+        "name": "Ding Tea Riverside",
+        "city": "Riverside",
+        "address": "1575 University Ave",
+        "coordinates": [
+            33.976160113863585,
+            -117.34598656380552
+        ]
+    },
+    {
+        "name": "Placita Riverside",
+        "city": "Riverside",
+        "address": "1805 University Ave",
+        "coordinates": [
+            33.97601,
+            -117.35083
+        ]
+    },
+    {
+        "name": "Joey\u2019s Pastry Shop",
+        "city": "Riverside",
+        "address": "3782 Orange St",
+        "coordinates": [
+            33.98167,
+            -117.37292
+        ]
+    },
+    {
+        "name": "Bolcupop",
+        "city": "Riverside",
+        "address": "3605 Market St",
+        "coordinates": [
+            33.9842474772121,
+            -117.3747644944
+        ]
+    },
+    {
+        "name": "The Bistro At Courtyard By Marriott Riverside/ucr Area",
+        "city": "Riverside",
+        "address": "1510 University Ave",
+        "coordinates": [
+            33.974945,
+            -117.344765
+        ]
+    },
+    {
+        "name": "Downtown Farmer's Market",
+        "city": "Riverside",
+        "address": "10TH Lemon St Downtown",
+        "coordinates": [
+            33.98443821728788,
+            -117.37279231702858
+        ]
+    },
+    {
+        "name": "Cupcakes and Curiosities",
+        "city": "Riverside",
+        "address": "3569 Main St",
+        "coordinates": [
+            33.984383,
+            -117.3730962
+        ]
+    },
+    {
+        "name": "Ten Ren's Tea Time",
+        "city": "Riverside",
+        "address": "1400 University Ave",
+        "coordinates": [
+            33.975392,
+            -117.341769
+        ]
+    },
+    {
+        "name": "Starbucks",
+        "city": "Riverside",
+        "address": "1303 University Ave",
+        "coordinates": [
+            33.9759799,
+            -117.34027623
+        ]
+    },
+    {
+        "name": "Winchell's Donuts",
+        "city": "Riverside",
+        "address": "1705 University Ave",
+        "coordinates": [
+            33.97604,
+            -117.34873
+        ]
+    },
+    {
+        "name": "Everytable",
+        "city": "Riverside",
+        "address": "3750 University Ave",
+        "coordinates": [
+            33.981958491329216,
+            -117.37529632581419
+        ]
+    },
+    {
+        "name": "Cha2o Vietnamese Restaurant & Dessert Lounge - Riverside",
+        "city": "Riverside",
+        "address": "1400 University Ave",
+        "coordinates": [
+            33.975378,
+            -117.34178
+        ]
+    },
+    {
+        "name": "Boba Fiend Tea House",
+        "city": "Riverside",
+        "address": "3375 Iowa Ave",
+        "coordinates": [
+            33.98077,
+            -117.34002
+        ]
+    },
+    {
+        "name": "Funn-O-Cakes",
+        "city": "Riverside",
+        "address": "3361 Market St",
+        "coordinates": [
+            33.9868204,
+            -117.3733009
+        ]
+    },
+    {
+        "name": "The Upper Crust Sandwich Shoppe",
+        "city": "Riverside",
+        "address": "3573 Main St",
+        "coordinates": [
+            33.984351,
+            -117.373358
+        ]
+    },
+    {
+        "name": "The Salted Pig",
+        "city": "Riverside",
+        "address": "3750 Main St",
+        "coordinates": [
+            33.98226,
+            -117.37386
+        ]
+    },
+    {
+        "name": "Bloom & Butter",
+        "city": "Riverside",
+        "address": "3540 9th St",
+        "coordinates": [
+            33.97998,
+            -117.373350588061
+        ]
+    },
+    {
+        "name": "Heroes Restaurant and Brewery",
+        "city": "Riverside",
+        "address": "3397 Mission Inn Ave",
+        "coordinates": [
+            33.9814567544957,
+            -117.369853856673
+        ]
+    },
+    {
+        "name": "Route 30",
+        "city": "Riverside",
+        "address": "3740 Mission Inn Ave",
+        "coordinates": [
+            33.98303,
+            -117.3743623
+        ]
+    },
+    {
+        "name": "Starbucks Coffee",
+        "city": "Riverside",
+        "address": "1280 W Blaine St",
+        "coordinates": [
+            33.982742,
+            -117.339416
+        ]
+    },
+    {
+        "name": "Mixies Ice Cream & Cookies",
+        "city": "Riverside",
+        "address": "3605 Market St",
+        "coordinates": [
+            33.98452,
+            -117.37488
+        ]
+    },
+    {
+        "name": "ProAbition",
+        "city": "Riverside",
+        "address": "3597 Main St",
+        "coordinates": [
+            33.983969,
+            -117.3731243
+        ]
+    },
+    {
+        "name": "La Michoacana Ice Cream",
+        "city": "Riverside",
+        "address": "3961 Chicago Ave",
+        "coordinates": [
+            33.97415,
+            -117.34865
+        ]
+    },
+    {
+        "name": "Lola's Bakery",
+        "city": "Riverside",
+        "address": "4026 Chicago Ave",
+        "coordinates": [
+            33.973321,
+            -117.347353
         ]
     }
 ]
