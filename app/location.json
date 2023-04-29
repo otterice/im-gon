@@ -1,0 +1,173 @@
+[
+    {
+        "name": "Javalencia Cafe",
+        "city": "San Francisco",
+        "address": "1594 Market St",
+        "coordinates": [
+            37.77436888791,
+            -122.42056352338
+        ]
+    },
+    {
+        "name": "All Star Cafe",
+        "city": "San Francisco",
+        "address": "1500 Market St",
+        "coordinates": [
+            37.77525,
+            -122.41954
+        ]
+    },
+    {
+        "name": "Blue Bottle Coffee",
+        "city": "San Francisco",
+        "address": "55 S Van Ness Ave",
+        "coordinates": [
+            37.773565810684424,
+            -122.4184657
+        ]
+    },
+    {
+        "name": "B.Street Waffles",
+        "city": "Palm Springs",
+        "address": "",
+        "coordinates": [
+            37.7749295,
+            -122.4194155
+        ]
+    },
+    {
+        "name": "Little Griddle",
+        "city": "San Francisco",
+        "address": "1455 Market St",
+        "coordinates": [
+            37.775736486686775,
+            -122.41823404585583
+        ]
+    },
+    {
+        "name": "Earthbar",
+        "city": "San Francisco",
+        "address": "1560 Mission St",
+        "coordinates": [
+            37.77353730103808,
+            -122.4184519383539
+        ]
+    },
+    {
+        "name": "Lunnah",
+        "city": "M\u00e9xico, D.F.",
+        "address": "San Francisco 1431 - A",
+        "coordinates": [
+            19.3761005,
+            -99.1748962
+        ]
+    },
+    {
+        "name": "Milkman SF",
+        "city": "San Francisco",
+        "address": "",
+        "coordinates": [
+            37.7749295,
+            -122.4194155
+        ]
+    },
+    {
+        "name": "Dough",
+        "city": "San Francisco",
+        "address": "1455 Market St",
+        "coordinates": [
+            37.775703939968864,
+            -122.41816754110529
+        ]
+    },
+    {
+        "name": "Se\u00f1or Sisig - Food Trucks",
+        "city": "San Francisco",
+        "address": "",
+        "coordinates": [
+            37.7749295,
+            -122.4194155
+        ]
+    },
+    {
+        "name": "Cafe Creme",
+        "city": "San Francisco",
+        "address": "50 Oak St",
+        "coordinates": [
+            37.77544,
+            -122.42033
+        ]
+    },
+    {
+        "name": "Nina's Cafe",
+        "city": "San Francisco",
+        "address": "201 Fell St",
+        "coordinates": [
+            37.776049780427,
+            -122.4212838675
+        ]
+    },
+    {
+        "name": "Saint & Olive",
+        "city": "San Francisco",
+        "address": "",
+        "coordinates": [
+            37.7749295,
+            -122.4194155
+        ]
+    },
+    {
+        "name": "Peach Pit",
+        "city": "Winterville",
+        "address": "321 Athens Rd",
+        "coordinates": [
+            33.97368501693624,
+            -83.28944896356688
+        ]
+    },
+    {
+        "name": "Candy Bar Dessert Truck",
+        "city": "San Francisco",
+        "address": "",
+        "coordinates": [
+            37.7749295,
+            -122.4194155
+        ]
+    },
+    {
+        "name": "Anthony and Alice's Bistro",
+        "city": "San Francisco",
+        "address": "",
+        "coordinates": [
+            37.7771186828613,
+            -122.419639587402
+        ]
+    },
+    {
+        "name": "Roger's Chocolates",
+        "city": "San Francisco",
+        "address": null,
+        "coordinates": [
+            37.77501,
+            -122.41826
+        ]
+    },
+    {
+        "name": "Ralphs Italian Ices",
+        "city": "Valley Stream",
+        "address": "1091 Rockaway Ave",
+        "coordinates": [
+            40.651948556879184,
+            -73.69289743691625
+        ]
+    },
+    {
+        "name": "Fresh Diet",
+        "city": "San Francisco",
+        "address": null,
+        "coordinates": [
+            37.77501,
+            -122.41826
+        ]
+    }
+]

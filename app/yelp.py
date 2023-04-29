@@ -1,32 +1,35 @@
 import requests
 import json
 
-api_key= 'lqV8h9Ut1h-q5K49ZDz0Dv9t2ZwFZVZ6HI-DjWTr9TXqMFlzO5NbDbxMoSqJPJVNIaMYND6qTYtWqeUtraucXy0sQ943Yvi3fAfqAgKMF9DYB-eYKnkxMyRbiFFNZHYx'
+api_key = 'lqV8h9Ut1h-q5K49ZDz0Dv9t2ZwFZVZ6HI-DjWTr9TXqMFlzO5NbDbxMoSqJPJVNIaMYND6qTYtWqeUtraucXy0sQ943Yvi3fAfqAgKMF9DYB-eYKnkxMyRbiFFNZHYx'
 
 #where you are/start/currently reside
 lat = 33.975756978566686
 long = -117.3389807714277
 rad = 1609
 
-headers = {'Authorization': 'Bearer {}'.format(api_key)}
-search_api_url = "https://api.yelp.com/v3/businesses/search?latitude={}&longitude={}&radius={}".format(lat, long, rad)
-params = {'term': 'coffee', 'location': 'Toronto, Ontario','limit': 50}
+def around(lat,long,rad):
+    headers = {'Authorization': 'Bearer {}'.format(api_key)}
+    search_api_url = "https://api.yelp.com/v3/businesses/search?latitude={}&longitude={}&radius={}".format(lat, long, rad)
+    params = {'term': 'coffee', 'location': 'Toronto, Ontario','limit': 50}
 
-response = requests.get(search_api_url, headers=headers, params=params, timeout=5)
+    response = requests.get(search_api_url, headers=headers, params=params, timeout=5)
 
-data = json.loads(response.text)
+    data = json.loads(response.text)
 
-results = []
-for business in data['businesses']:
-    result = {}
-    result['name'] = business['name']
-    result['city'] = business['location']['city']
-    result['address'] = business['location']['address1']
-    result['coordinates'] = [business['coordinates']['latitude'], business['coordinates']['longitude']]
-    results.append(result)
+    results = []
+    for business in data['businesses']:
+        result = {}
+        result['name'] = business['name']
+        result['city'] = business['location']['city']
+        result['address'] = business['location']['address1']
+        result['coordinates'] = [business['coordinates']['latitude'], business['coordinates']['longitude']]
+        results.append(result)
 
-with open('location.json', 'w') as f:
-    json.dump(results, f, indent=4)
+    with open('location.json', 'w') as f:
+        json.dump(results, f, indent=4)
+
+    return results
 
 # import requests
 # import json
