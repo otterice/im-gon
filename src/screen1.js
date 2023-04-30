@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Screen1() {
   const [startLat, setStartLat] = useState('');
@@ -6,9 +7,16 @@ function Screen1() {
   const [endLat, setEndLat] = useState('');
   const [endLong, setEndLong] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Do something with the input values, e.g. update the state
+    // Make an API request to Flask to get the Yelp results
+    try {
+      const response = await axios.get(`http://localhost:105/ycyrc?startLat=${startLat}&startLong=${startLong}&endLat=${endLat}&endLong=${endLong}`);
+      const results = response.data;
+      // Do something with the results, e.g. update the state
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -36,7 +44,7 @@ function Screen1() {
         </label>
         <br />
         <button type="submit">Submit</button>
-      </form>
+      </form> 
     </div>
   );
 }
