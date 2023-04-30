@@ -1,1 +1,92 @@
-[]
+[
+    {
+        "name": "Phin Smith",
+        "city": "Garden Grove",
+        "address": "12921 Main St",
+        "coordinates": [
+            33.7749709,
+            -117.94126
+        ]
+    },
+    {
+        "name": "Dark Horse Coffee Roasters",
+        "city": "Garden Grove",
+        "address": "12900 Euclid St",
+        "coordinates": [
+            33.775362,
+            -117.937304
+        ]
+    },
+    {
+        "name": "Phuc Long Coffee And Tea",
+        "city": "Garden Grove",
+        "address": "12936 Main St",
+        "coordinates": [
+            33.77484,
+            -117.94064
+        ]
+    },
+    {
+        "name": "102 Cafe",
+        "city": "Garden Grove",
+        "address": "12908 Main St",
+        "coordinates": [
+            33.77526,
+            -117.94064
+        ]
+    },
+    {
+        "name": "E Patisserie Cafe",
+        "city": "Garden Grove",
+        "address": "12919 Main St",
+        "coordinates": [
+            33.7749523542135,
+            -117.941055030119
+        ]
+    },
+    {
+        "name": "7 Leaves Cafe",
+        "city": "Garden Grove",
+        "address": "13481 Euclid St",
+        "coordinates": [
+            33.7672502,
+            -117.9380049
+        ]
+    },
+    {
+        "name": "SteelCraft - Garden Grove",
+        "city": "Garden Grove",
+        "address": "12900 Euclid St",
+        "coordinates": [
+            33.775326838192186,
+            -117.93748390245437
+        ]
+    },
+    {
+        "name": "Summerfield Tea Bar",
+        "city": "Garden Grove",
+        "address": "12460 S Euclid St",
+        "coordinates": [
+            33.78162,
+            -117.94076
+        ]
+    },
+    {
+        "name": "Ma Juicy",
+        "city": "Garden Grove",
+        "address": "13281 Brookhurst St",
+        "coordinates": [
+            33.76957,
+            -117.95556
+        ]
+    },
+    {
+        "name": "Duck Donuts",
+        "city": "Garden Grove",
+        "address": "12900 Euclid St",
+        "coordinates": [
+            33.7753169,
+            -117.9373202
+        ]
+    }
+]
