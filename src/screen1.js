@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function App() {
+function Screen1() {
   const [startLat, setStartLat] = useState('');
   const [startLong, setStartLong] = useState('');
   const [endLat, setEndLat] = useState('');
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Screen1;

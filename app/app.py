@@ -3,7 +3,7 @@ import yelp
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/ycyrc', methods=['GET'])
 def nearby_fun(): 
     lat = 33.975600
     long = -117.357151

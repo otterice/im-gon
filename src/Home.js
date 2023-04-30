@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 const Home = () => {
   return (
     <div>
+      <h3><Link to="/screen1" >Go to all screen1</Link></h3>
       <h3><Link to="/allRoutes" >Go to all routes</Link></h3>
       <h3><Link to="/markRoutes" >Go to mark routes</Link></h3>
 
