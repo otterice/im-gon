@@ -1,8 +1,20 @@
+<<<<<<< Updated upstream
 import logo from './logo.svg';
 import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import * as MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 import axios from 'axios';
+=======
+import React from "react";
+import {
+ BrowserRouter as Router,
+ Routes,
+ Route
+} from "react-router-dom";
+import screen1 from "./screen1";
+import AllRoutes from "./AllRoutes"
+import MarkRoutes from "./MarkRoutes"
+>>>>>>> Stashed changes
 
 
 
@@ -115,6 +127,7 @@ function App() {
   });
     
   return (
+<<<<<<< Updated upstream
     <div className="App">
       <header className="App-header">
         <div className="sidebar">
@@ -126,6 +139,16 @@ function App() {
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css"></link>
 
     </div>
+=======
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/screen1" element={<screen1 />} />
+        <Route path="/allRoutes" element={<AllRoutes />} />
+        <Route path="/markRoutes" element={<MarkRoutes/>}/>
+      </Routes>
+    </Router>
+>>>>>>> Stashed changes
   );
 
   
