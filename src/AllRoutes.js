@@ -3,11 +3,18 @@ import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import * as MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 import axios from 'axios';
+import { useSearchParams } from 'react-router-dom';
+
 
 function AllRoutes() {
+const [searchParams] = useSearchParams();
+
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   var MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions');
 
+  mapboxgl.accessToken = 'pk.eyJ1IjoiajVkYW5nIiwiYSI6ImNsaDJqbGdrazFlNngzbXBqaDFtZDN0M2UifQ.n11OY-5zVbp7n4JnvvS5Nw';
+
+  
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -16,9 +23,13 @@ function AllRoutes() {
   const [zoom, setZoom] = useState(9);
   const [routes, setRoutes] = useState([]);
   const [waypoints, setWaypoints] = useState([]);
+  const [points, setPoints] = useState([]);
   var directions = useRef(null);
 
   useEffect(() => {
+    setPoints(searchParams.get('id'));
+    console.log(points);
+    
     if (map.current) return; // initialize map only once
       map.current = new mapboxgl.Map({
         container: mapContainer.current,

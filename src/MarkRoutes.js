@@ -1,11 +1,13 @@
 import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
+import {Link, useNavigate, createSearchParams} from "react-router-dom";
 
 function MarkRoutes() {
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   var MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions');
 
+  mapboxgl.accessToken = 'pk.eyJ1IjoiajVkYW5nIiwiYSI6ImNsaDJqbGdrazFlNngzbXBqaDFtZDN0M2UifQ.n11OY-5zVbp7n4JnvvS5Nw';
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -15,7 +17,7 @@ function MarkRoutes() {
   const [routes, setRoutes] = useState([]);
   const [waypoints, setWaypoints] = useState([]);
   const [markers, setMarkers] = useState([]);
-  const [showPopup, setShowPopup] = useState(false);
+  var [savedDest, setSavedDest] = useState([]);
 
   var directions = useRef(null);
 
@@ -68,49 +70,22 @@ function MarkRoutes() {
       setZoom(map.current.getZoom().toFixed(2));
     });
 
-    
-
-    // // create DOM element for the marker
-    // var el = document.createElement('div');
-    // el.innerHTML = "Marker1";
-    // el.id = 'marker';
-
-    // // create the marker
-    // const marker1 = new mapboxgl.Marker(el)
-    //     .setLngLat([-115.7000,35.8000])
-    //     .setPopup(popup) // sets a popup on this marker
-    //     .addTo(map.current);
-
-    // el.addEventListener('click', () => 
-    //     { 
-    //         const result = window.confirm('Are you sure you want to delete this item?');
-    //         if (result) {
-    //             console.log(marker1.getLngLat());
-    //         } else {
-    //         // User clicked Cancel
-    //         // Do nothing or show a message
-    //         }
-
-    //     }
-    // );
-
 
     for (var i = 0; i < customPoints.length; i++) {
         markers.push(customPoints[i].coordinates);
 
 
         var popup = new mapboxgl.Popup({offset: 25})
-    .setHTML(`<div>The museum</div><button id="btn${i}">Yes</button>`);
+    .setText('Hi');
        
 
           var el = document.createElement('div');
           el.innerHTML = "Marker" + i;
-          el.id = 'marker';
-
-          
+          el.id = 'marker';  
 
         
 
+        // Add the <a-entity> element to the marker
         let marker = new mapboxgl.Marker(el)
         .setLngLat(customPoints[i].coordinates)
         .setPopup(popup) // sets a popup on this marker
@@ -118,38 +93,14 @@ function MarkRoutes() {
 
         console.log(customPoints[i].coordinates);
 
-          el.addEventListener("click", myFunction1);
-
-          async function myFunction1() {
-            const delay = ms => new Promise(res => setTimeout(res, ms));
-
-            await delay(3000);
-
-            console.log(markers[i]);
-
-            const element = document.getElementById(`btn${i   }`);
-            element.addEventListener("click", myfunct2);
-
-            function myfunct2() {
-                console.log("hey");
-            }
-
-          }
-
      function createClickListener(index) {
         el.addEventListener('click', () => {
-            //const result = window.confirm('Are you sure you want to delete this item?');
-    //         const newPopupWindow = window.open('', '', 'width=400,height=200');
-    // newPopupWindow.document.body.innerHTML = `
-    //   <div style="text-align: center;">
-    //     <p>${markers[index]}</p>
-    //     <button id="popup-yes" style="margin-right: 20px;">Yes</button>
-    //     <button id="popup-no">No</button>
-    //   </div>
-    // `;
-      
-            if (true) {
+            const result = window.confirm('Do you want to save this destination?');
+        
+            if (result) {
                 console.log(markers[index]);
+                savedDest.push(markers[index]);
+
             } else {
                 // User clicked Cancel
                 // Do nothing or show a message
@@ -181,15 +132,32 @@ function MarkRoutes() {
 
     getData();
   });
+
+  function ret() {
+    console.log(savedDest);
+  }
+
+  const navigate = useNavigate();
+  const passPoints = (id) => {
+    navigate({
+        pathname: "/allRoutes",
+        search: createSearchParams({
+            id: savedDest
+        }).toString()
+    })
+  };
     
   return (
     <div className="App">
       <header className="App-header">
+        <h3><button onClick={passPoints}>heyyy</button></h3>
         <div ref={mapContainer} style={{ width: "100%", height: "600px" }}> </div>
+
       </header>
       <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css"></link>
-
+      <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
     </div>
   );  
 }
