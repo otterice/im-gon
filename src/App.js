@@ -7,7 +7,6 @@ import {
 import screen1 from "./screen1";
 import AllRoutes from "./AllRoutes"
 import MarkRoutes from "./MarkRoutes"
->>>>>>> Stashed changes
 
 
 const App = () => {
