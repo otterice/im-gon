@@ -4,7 +4,6 @@ import {
  Routes,
  Route
 } from "react-router-dom";
-import screen1 from "./screen1";
 import AllRoutes from "./AllRoutes"
 import MarkRoutes from "./MarkRoutes"
 
