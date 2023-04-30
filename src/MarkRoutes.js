@@ -90,13 +90,18 @@ function MarkRoutes() {
           });
 
           map.current.on('move', () => {
-            setLng(map.current.getCenter().lng.toFixed(4));
-            setLat(map.current.getCenter().lat.toFixed(4));
+            setLng(customPoints[0].coordinates[1].toFixed(4));
+            setLat(customPoints[0].coordinates[0].toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
           });
 
+   
+
 
           for (var i = 0; i < customPoints.length; i++) {
+    
+
+
             markers.push(customPoints[i].coordinates);
 
 
@@ -144,13 +149,13 @@ function MarkRoutes() {
 
 
           map.current.on('load', function () {
-            directions.setOrigin(waypoints[0][0].location);
-            for (let i = 1; i < waypoints[0].length - 1; i++) {
+            //directions.setOrigin(waypoints[0][0].location);
+            for (let i = 0; i < waypoints[0].length; i++) {
               const marker = new mapboxgl.Marker()
                 .setLngLat(waypoints[0][i].location)
                 .addTo(map.current);
             }
-            directions.setDestination(waypoints[0][waypoints[0].length - 1].location);
+            //directions.setDestination(waypoints[0][waypoints[0].length - 1].location);
           });
           map.current.addControl(directions, 'top-left');
         });
@@ -172,7 +177,7 @@ function MarkRoutes() {
   return (
     <div className="App">
       <header className="App-header">
-        <h3><button onClick={passPoints}>heyyy</button></h3>
+        <h3><button onClick={passPoints}>Next Page</button></h3>
         <div ref={mapContainer} style={{ width: "100%", height: "600px" }}> </div>
 
 

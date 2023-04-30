@@ -13,7 +13,7 @@ function AllRoutes() {
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiajVkYW5nIiwiYSI6ImNsaDJqbGdrazFlNngzbXBqaDFtZDN0M2UifQ.n11OY-5zVbp7n4JnvvS5Nw';
 
-  
+
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -31,11 +31,11 @@ function AllRoutes() {
   useEffect(() => {
 
     if (map.current) return; // initialize map only once
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v12',
-        center: [lng, lat],
-        zoom: zoom
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: zoom
     });//.addControl(directions, 'top-left');
     console.log(searchParams);
 
@@ -44,7 +44,7 @@ function AllRoutes() {
     searchParams.forEach((s, index) => {
       var b = (s.split(','))
       console.log(b)
-      customPoints.push({coordinates: [parseFloat(b[0]), parseFloat(b[1])]});
+      customPoints.push({ coordinates: [parseFloat(b[0]), parseFloat(b[1])] });
     });
 
     console.log(customPoints);
@@ -57,78 +57,78 @@ function AllRoutes() {
 
     // ];
 
-//     let search = window.location.search;
-// let params = new URLSearchParams(search);
-// let foo = params.get('id');
-    
-//     console.log(foo);
+    //     let search = window.location.search;
+    // let params = new URLSearchParams(search);
+    // let foo = params.get('id');
+
+    //     console.log(foo);
 
     var apiReq = `https://api.mapbox.com/directions/v5/mapbox/driving/`;
 
     customPoints.forEach((point, index) => {
       apiReq += point.coordinates[0] + '%2C' + point.coordinates[1] + '%3B';
     });
-    apiReq=apiReq.slice(0,-3);
+    apiReq = apiReq.slice(0, -3);
     apiReq += `?alternatives=true&geometries=geojson&language=en&overview=simplified&steps=true&access_token=${mapboxgl.accessToken}`;
 
     console.log(apiReq);
     const getData = async () => {
       await axios.get(
-      apiReq)
-      .then(response => {
-        routes.push((response.data.routes)); 
-        waypoints.push((response.data.waypoints));
+        apiReq)
+        .then(response => {
+          routes.push((response.data.routes));
+          waypoints.push((response.data.waypoints));
 
-        const instructions = document.getElementById('instructions');
-        let time = 0;
-        let tripInstructions = '';
-       
-        routes[0].forEach((route) => {
-          time += route.duration;
-          route.legs.forEach((leg) => {
-            leg.steps.forEach((step) => {
-              tripInstructions += `<li>${step.maneuver.instruction}</li>`;
+          const instructions = document.getElementById('instructions');
+          let time = 0;
+          let tripInstructions = '';
 
-              console.log(step.maneuver.instruction);
+          routes[0].forEach((route) => {
+            time += route.duration;
+            route.legs.forEach((leg) => {
+              leg.steps.forEach((step) => {
+                tripInstructions += `<li>${step.maneuver.instruction}</li>`;
+
+                console.log(step.maneuver.instruction);
+              })
             })
-          })
+          });
+
+          instructions.innerHTML = `<p><strong>Trip duration: ${Math.floor(
+            time / 60
+          )} min 🚴 </strong></p><ol>${tripInstructions}</ol>`;
+
+          directions = new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            unit: 'metric',
+            profile: 'mapbox/driving',
+            controls: { instructions: false }
+
+          });
+
+          map.current.on('move', () => {
+            setLng(customPoints[0].coordinates[1].toFixed(4));
+            setLat(customPoints[0].coordinates[0].toFixed(4));
+            setZoom(map.current.getZoom().toFixed(2));
+          });
+
+          map.current.on('load', function () {
+            directions.setOrigin(waypoints[0][0].location);
+            for (let i = 1; i < waypoints[0].length - 1; i++) {
+              directions.addWaypoint(i, waypoints[0][i].location);
+              const marker = new mapboxgl.Marker()
+                .setLngLat(waypoints[0][i].location)
+                .addTo(map.current);
+            }
+            directions.setDestination(waypoints[0][waypoints[0].length - 1].location);
+          });
+          map.current.addControl(directions, 'top-left');
         });
-
-        instructions.innerHTML = `<p><strong>Trip duration: ${Math.floor(
-          time / 60
-        )} min 🚴 </strong></p><ol>${tripInstructions}</ol>`;
-
-        directions = new MapboxDirections({
-          accessToken: mapboxgl.accessToken,
-          unit: 'metric',
-          profile: 'mapbox/driving',
-          controls:{instructions:false}
-          
-        });
-
-    map.current.on('move', () => {
-      setLng(map.current.getCenter().lng.toFixed(4));
-      setLat(map.current.getCenter().lat.toFixed(4));
-      setZoom(map.current.getZoom().toFixed(2));
-    });
-
-    map.current.on('load', function() {
-      directions.setOrigin(waypoints[0][0].location);
-      for (let i = 1; i < waypoints[0].length-1; i++) {
-      directions.addWaypoint(i, waypoints[0][i].location);
-        const marker = new mapboxgl.Marker()
-        .setLngLat(waypoints[0][i].location)
-        .addTo(map.current);   
-      }
-      directions.setDestination(waypoints[0][waypoints[0].length-1].location);      
-    });
-      map.current.addControl(directions, 'top-left');
-      });
     }
 
     getData();
   });
-    
+
   return (
     <div className="App">
       <header className="App-header">
@@ -139,7 +139,7 @@ function AllRoutes() {
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css"></link>
 
     </div>
-  );  
+  );
 }
 
 
