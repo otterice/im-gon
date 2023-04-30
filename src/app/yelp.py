@@ -13,7 +13,7 @@ categories = "Active Life, Arts & Entertainment,Food, Hotels & Travel,Nightlife,
 def around(lat,long,rad):
     headers = {'Authorization': 'Bearer {}'.format(api_key)}
     search_api_url = "https://api.yelp.com/v3/businesses/search?latitude={}&longitude={}&radius={}&categories={}".format(lat, long, rad, categories)
-    params = {'term': 'coffee','limit': 50}
+    params = {'term': 'coffee','limit': 10}
 
     response = requests.get(search_api_url, headers=headers, params=params, timeout=5)
 

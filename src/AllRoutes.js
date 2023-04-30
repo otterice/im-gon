@@ -29,8 +29,7 @@ function AllRoutes() {
 
 
   useEffect(() => {
-    
-    
+
     if (map.current) return; // initialize map only once
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
@@ -38,20 +37,31 @@ function AllRoutes() {
         center: [lng, lat],
         zoom: zoom
     });//.addControl(directions, 'top-left');
+    console.log(searchParams);
 
-    const customPoints = [
-      { name: 'Point A', coordinates: [-117.8674,34.8818] },
-      { name: 'Point B', coordinates: [-118.8674,35.8818] },
-      { name: 'Point C', coordinates: [-118.8694,36.8818] },
-      { name: 'Point D', coordinates: [-119.8694,36.8818] },
+    var customPoints = [];
 
-    ];
+    searchParams.forEach((s, index) => {
+      var b = (s.split(','))
+      console.log(b)
+      customPoints.push({coordinates: [parseFloat(b[0]), parseFloat(b[1])]});
+    });
 
-    let search = window.location.search;
-let params = new URLSearchParams(search);
-let foo = params.get('id');
+    console.log(customPoints);
+
+    // const customPoints = [
+    //   { name: 'Point A', coordinates: [-117.8674,34.8818] },
+    //   { name: 'Point B', coordinates: [-118.8674,35.8818] },
+    //   { name: 'Point C', coordinates: [-118.8694,36.8818] },
+    //   { name: 'Point D', coordinates: [-119.8694,36.8818] },
+
+    // ];
+
+//     let search = window.location.search;
+// let params = new URLSearchParams(search);
+// let foo = params.get('id');
     
-    console.log(foo);
+//     console.log(foo);
 
     var apiReq = `https://api.mapbox.com/directions/v5/mapbox/driving/`;
 
@@ -61,6 +71,7 @@ let foo = params.get('id');
     apiReq=apiReq.slice(0,-3);
     apiReq += `?alternatives=true&geometries=geojson&language=en&overview=simplified&steps=true&access_token=${mapboxgl.accessToken}`;
 
+    console.log(apiReq);
     const getData = async () => {
       await axios.get(
       apiReq)
