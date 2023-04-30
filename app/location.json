@@ -81,30 +81,12 @@
         ]
     },
     {
-        "name": "Krak Boba - Riverside",
-        "city": "Riverside",
-        "address": "3907 Chicago Ave",
-        "coordinates": [
-            33.974611,
-            -117.349367
-        ]
-    },
-    {
         "name": "Mochinut",
         "city": "Riverside",
         "address": "1242 University Ave",
         "coordinates": [
             33.97524472417301,
             -117.3380628981971
-        ]
-    },
-    {
-        "name": "Ding Tea Riverside",
-        "city": "Riverside",
-        "address": "1575 University Ave",
-        "coordinates": [
-            33.976160113863585,
-            -117.34598656380552
         ]
     },
     {
@@ -135,12 +117,12 @@
         ]
     },
     {
-        "name": "Cha2o Vietnamese Restaurant & Dessert Lounge - Riverside",
+        "name": "Krak Boba - Riverside",
         "city": "Riverside",
-        "address": "1400 University Ave",
+        "address": "3907 Chicago Ave",
         "coordinates": [
-            33.975378,
-            -117.34178
+            33.974611,
+            -117.349367
         ]
     },
     {
@@ -153,12 +135,12 @@
         ]
     },
     {
-        "name": "R&B Tea - Riverside",
+        "name": "Ding Tea Riverside",
         "city": "Riverside",
-        "address": "1889 University Ave",
+        "address": "1575 University Ave",
         "coordinates": [
-            33.975921,
-            -117.352412
+            33.976160113863585,
+            -117.34598656380552
         ]
     },
     {
@@ -168,6 +150,15 @@
         "coordinates": [
             33.9908981323242,
             -117.343734741211
+        ]
+    },
+    {
+        "name": "R&B Tea - Riverside",
+        "city": "Riverside",
+        "address": "1889 University Ave",
+        "coordinates": [
+            33.975921,
+            -117.352412
         ]
     },
     {
@@ -189,15 +180,6 @@
         ]
     },
     {
-        "name": "Boba Fiend Tea House",
-        "city": "Riverside",
-        "address": "3375 Iowa Ave",
-        "coordinates": [
-            33.98077,
-            -117.34002
-        ]
-    },
-    {
         "name": "The Bistro At Courtyard By Marriott Riverside/ucr Area",
         "city": "Riverside",
         "address": "1510 University Ave",
@@ -207,12 +189,30 @@
         ]
     },
     {
+        "name": "Boba Fiend Tea House",
+        "city": "Riverside",
+        "address": "3375 Iowa Ave",
+        "coordinates": [
+            33.98077,
+            -117.34002
+        ]
+    },
+    {
         "name": "Ten Ren's Tea Time",
         "city": "Riverside",
         "address": "1400 University Ave",
         "coordinates": [
             33.975392,
             -117.341769
+        ]
+    },
+    {
+        "name": "Cha2o Vietnamese Restaurant & Dessert Lounge - Riverside",
+        "city": "Riverside",
+        "address": "1400 University Ave",
+        "coordinates": [
+            33.975378,
+            -117.34178
         ]
     },
     {
@@ -243,21 +243,21 @@
         ]
     },
     {
-        "name": "Afters Ice Cream",
-        "city": "Riverside",
-        "address": "1201 University Ave",
-        "coordinates": [
-            33.97630709500345,
-            -117.33751634135439
-        ]
-    },
-    {
         "name": "Winchell's Donuts",
         "city": "Riverside",
         "address": "1705 University Ave",
         "coordinates": [
             33.97604,
             -117.34873
+        ]
+    },
+    {
+        "name": "Afters Ice Cream",
+        "city": "Riverside",
+        "address": "1201 University Ave",
+        "coordinates": [
+            33.97630709500345,
+            -117.33751634135439
         ]
     },
     {
@@ -288,15 +288,6 @@
         ]
     },
     {
-        "name": "Boba Tea House",
-        "city": "Riverside",
-        "address": "767 W Blaine St",
-        "coordinates": [
-            33.9835452608072,
-            -117.327264400309
-        ]
-    },
-    {
         "name": "7-Eleven",
         "city": "Riverside",
         "address": "3740 Iowa Ave",
@@ -312,6 +303,15 @@
         "coordinates": [
             33.983632,
             -117.327555
+        ]
+    },
+    {
+        "name": "Boba Tea House",
+        "city": "Riverside",
+        "address": "767 W Blaine St",
+        "coordinates": [
+            33.9835452608072,
+            -117.327264400309
         ]
     },
     {
@@ -360,15 +360,6 @@
         ]
     },
     {
-        "name": "Yogurtland",
-        "city": "Riverside",
-        "address": "1242 University Ave",
-        "coordinates": [
-            33.975388,
-            -117.338065179466
-        ]
-    },
-    {
         "name": "Bytes",
         "city": "Riverside",
         "address": "900 University Ave",
@@ -387,6 +378,15 @@
         ]
     },
     {
+        "name": "Yogurtland",
+        "city": "Riverside",
+        "address": "1242 University Ave",
+        "coordinates": [
+            33.975388,
+            -117.338065179466
+        ]
+    },
+    {
         "name": "Grocery Outlet",
         "city": "Riverside",
         "address": "3981 Chicago Ave",
@@ -396,21 +396,21 @@
         ]
     },
     {
-        "name": "La Michoacana Ice Cream",
-        "city": "Riverside",
-        "address": "3961 Chicago Ave",
-        "coordinates": [
-            33.97415,
-            -117.34865
-        ]
-    },
-    {
         "name": "IHOP",
         "city": "Riverside",
         "address": "1320 University Ave",
         "coordinates": [
             33.97548,
             -117.34081
+        ]
+    },
+    {
+        "name": "La Michoacana Ice Cream",
+        "city": "Riverside",
+        "address": "3961 Chicago Ave",
+        "coordinates": [
+            33.97415,
+            -117.34865
         ]
     },
     {
