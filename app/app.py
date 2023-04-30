@@ -12,15 +12,20 @@ def nearby_fun():
     # Use the inputted coordinates to get Yelp results
     results = yelp.around(start_lat, start_long, 1690)
 
-    results['start_lat'] = start_lat
-    results['start_long'] = start_long
-    results['end_lat'] = end_lat
-    results['end_long'] = end_long
+    # Convert results to a dictionary if it's a list
+    if isinstance(results, list):
+        results = {'results': results}
 
-    print(start_lat,start_long,end_lat,end_long)
+    results['coordinates'] = {
+        'start_lat': start_lat,
+        'start_long': start_long,
+        'end_lat': end_lat,
+        'end_long': end_long
+    }
+
+    print(start_lat, start_long, end_lat, end_long)
 
     return jsonify(results)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=105)
-
