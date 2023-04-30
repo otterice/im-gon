@@ -1,7 +1,7 @@
 import requests
 import json
 
-api_key = 'FILL THE YELP API KEY HERE'
+api_key = 'YA161LE1yz6X6GDKlKM8K1SDYTQv8XwYCsTPPZ2sSIphzVz2xvkcD5czI24KRfKvtY_vY1zHj-vF1A-K2Ts1C3BOM9C4CIFMgxXVQtSRIhZgxQ_wWX0mGiODIKZNZHYx'
 
 #where you are/start/currently reside
 # lat = 33.975756978566686
