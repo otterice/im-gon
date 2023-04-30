@@ -6,7 +6,6 @@ function MarkRoutes() {
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   var MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions');
 
-  mapboxgl.accessToken = ''
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -15,6 +14,9 @@ function MarkRoutes() {
   const [zoom, setZoom] = useState(9);
   const [routes, setRoutes] = useState([]);
   const [waypoints, setWaypoints] = useState([]);
+  const [markers, setMarkers] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
+
   var directions = useRef(null);
 
   useEffect(() => {
@@ -92,38 +94,73 @@ function MarkRoutes() {
     //     }
     // );
 
-    let markers = [];
 
     for (var i = 0; i < customPoints.length; i++) {
+        markers.push(customPoints[i].coordinates);
+
 
         var popup = new mapboxgl.Popup({offset: 25})
-    .setText(i);
+    .setHTML(`<div>The museum</div><button id="btn${i}">Yes</button>`);
        
 
           var el = document.createElement('div');
           el.innerHTML = "Marker" + i;
           el.id = 'marker';
 
-          new mapboxgl.Marker(el)
+          
+
+        
+
+        let marker = new mapboxgl.Marker(el)
         .setLngLat(customPoints[i].coordinates)
         .setPopup(popup) // sets a popup on this marker
         .addTo(map.current);
 
-        markers.push(customPoints[i].coordinates);
+        console.log(customPoints[i].coordinates);
 
-        el.addEventListener('click', () => 
-        { 
-            const result = window.confirm('Are you sure you want to delete this item?');
-            if (result) {
-                console.log(markers[i]);
-            } else {
-            // User clicked Cancel
-            // Do nothing or show a message
+          el.addEventListener("click", myFunction1);
+
+          async function myFunction1() {
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+
+            await delay(3000);
+
+            console.log(markers[i]);
+
+            const element = document.getElementById(`btn${i   }`);
+            element.addEventListener("click", myfunct2);
+
+            function myfunct2() {
+                console.log("hey");
             }
 
-        }
-    );
-      }
+          }
+
+     function createClickListener(index) {
+        el.addEventListener('click', () => {
+            //const result = window.confirm('Are you sure you want to delete this item?');
+    //         const newPopupWindow = window.open('', '', 'width=400,height=200');
+    // newPopupWindow.document.body.innerHTML = `
+    //   <div style="text-align: center;">
+    //     <p>${markers[index]}</p>
+    //     <button id="popup-yes" style="margin-right: 20px;">Yes</button>
+    //     <button id="popup-no">No</button>
+    //   </div>
+    // `;
+      
+            if (true) {
+                console.log(markers[index]);
+            } else {
+                // User clicked Cancel
+                // Do nothing or show a message
+            }
+        });
+        
+    
+    };
+
+        createClickListener(i);
+    }
 
       console.log(markers);
 

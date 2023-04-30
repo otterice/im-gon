@@ -8,7 +8,6 @@ function AllRoutes() {
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   var MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions');
 
-  mapboxgl.accessToken = ''
 
   const mapContainer = useRef(null);
   const map = useRef(null);
