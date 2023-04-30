@@ -2,6 +2,9 @@ import './App.css';
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
 import {Link, useNavigate, createSearchParams} from "react-router-dom";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 function MarkRoutes() {
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
@@ -21,14 +24,23 @@ function MarkRoutes() {
 
   var directions = useRef(null);
 
+
+
   useEffect(() => {
     if (map.current) return; // initialize map only once
+      // parameters to ensure the model is georeferenced correctly on the map
+
+      
+
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
         center: [lng, lat],
         zoom: zoom
     });//.addControl(directions, 'top-left');
+
+    
+
 
     const customPoints = [
       { name: 'Point A', coordinates: [-117.8674,34.8818] },
@@ -85,8 +97,7 @@ function MarkRoutes() {
 
         
 
-        // Add the <a-entity> element to the marker
-        let marker = new mapboxgl.Marker(el)
+        new mapboxgl.Marker(el)
         .setLngLat(customPoints[i].coordinates)
         .setPopup(popup) // sets a popup on this marker
         .addTo(map.current);
@@ -94,6 +105,7 @@ function MarkRoutes() {
         console.log(customPoints[i].coordinates);
 
      function createClickListener(index) {
+        
         el.addEventListener('click', () => {
             const result = window.confirm('Do you want to save this destination?');
         
@@ -133,10 +145,6 @@ function MarkRoutes() {
     getData();
   });
 
-  function ret() {
-    console.log(savedDest);
-  }
-
   const navigate = useNavigate();
   const passPoints = (id) => {
     navigate({
@@ -153,11 +161,11 @@ function MarkRoutes() {
         <h3><button onClick={passPoints}>heyyy</button></h3>
         <div ref={mapContainer} style={{ width: "100%", height: "600px" }}> </div>
 
+
       </header>
       <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css"></link>
-      <script src="https://unpkg.com/three@0.126.0/build/three.min.js"></script>
-<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+
     </div>
   );  
 }

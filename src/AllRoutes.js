@@ -7,7 +7,6 @@ import { useSearchParams } from 'react-router-dom';
 
 
 function AllRoutes() {
-const [searchParams] = useSearchParams();
 
   var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   var MapboxDirections = require('@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions');
@@ -26,9 +25,11 @@ const [searchParams] = useSearchParams();
   const [points, setPoints] = useState([]);
   var directions = useRef(null);
 
+  const [searchParams] = useSearchParams();
+
+
   useEffect(() => {
-    setPoints(searchParams.get('id'));
-    console.log(points);
+    
     
     if (map.current) return; // initialize map only once
       map.current = new mapboxgl.Map({
@@ -45,6 +46,12 @@ const [searchParams] = useSearchParams();
       { name: 'Point D', coordinates: [-119.8694,36.8818] },
 
     ];
+
+    let search = window.location.search;
+let params = new URLSearchParams(search);
+let foo = params.get('id');
+    
+    console.log(foo);
 
     var apiReq = `https://api.mapbox.com/directions/v5/mapbox/driving/`;
 

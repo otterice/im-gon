@@ -69,6 +69,17 @@
 
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+
+  #marker {
+    font-size: large;
+    height:0px;
+  width: 0px;
+  }
+  .mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  }
+
 #instructions {
   position: absolute;
   margin: 20px;
