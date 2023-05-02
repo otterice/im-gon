@@ -1,5 +1,4 @@
 # im-gon
 Citrus Hacks 23
 
-installation: 
-npm install --force
+https://devpost.com/software/im-gon
